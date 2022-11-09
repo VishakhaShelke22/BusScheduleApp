@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BusScheduleTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUS SCHEDULE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prs-v6-ETx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="qMT-4M-Odn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cq-M2-DYj">
+                                <rect key="frame" x="0.0" y="807" width="414" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="vxe-OV-GE5"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Bus Schedule" image="bus" catalog="system" id="ugb-kM-dD5"/>
+                                    <tabBarItem title="Ticket Book" image="ticket" catalog="system" id="u9Z-CE-ab4"/>
+                                    <tabBarItem title="Airport Route" image="airplane" catalog="system" id="j5o-Ng-RAS"/>
+                                    <tabBarItem title="Grievance" image="message.fill" catalog="system" id="YZb-Vf-lk2"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rD9-wB-xws">
+                                <rect key="frame" x="0.0" y="99" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Cq-M2-DYj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="14G-OT-vrD"/>
+                            <constraint firstItem="rD9-wB-xws" firstAttribute="top" secondItem="Prs-v6-ETx" secondAttribute="bottom" id="6z4-J8-eXp"/>
+                            <constraint firstItem="1Cq-M2-DYj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TOI-nH-nnd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Cq-M2-DYj" secondAttribute="bottom" id="V9u-W8-oGG"/>
+                            <constraint firstItem="Prs-v6-ETx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bbl-eH-fKH"/>
+                            <constraint firstItem="Prs-v6-ETx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bfP-8p-d9i"/>
+                            <constraint firstItem="1Cq-M2-DYj" firstAttribute="top" secondItem="rD9-wB-xws" secondAttribute="bottom" id="exW-la-eSw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rD9-wB-xws" secondAttribute="trailing" id="jlx-c0-xh8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Prs-v6-ETx" secondAttribute="trailing" id="kF4-gn-i2b"/>
+                            <constraint firstItem="rD9-wB-xws" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ooL-50-QcX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="rD9-wB-xws" id="lpm-a2-Wbe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airplane" catalog="system" width="128" height="115"/>
+        <image name="bus" catalog="system" width="128" height="122"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="ticket" catalog="system" width="128" height="84"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
